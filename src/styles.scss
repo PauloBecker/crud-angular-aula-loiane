@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+@include mat.core();
+
+$my-primary: mat.define-palette(mat.$blue-palette);
+$my-accent: mat.define-palette(mat.$indigo-palette, A200, A400, A700);
+$my-secondary: mat.define-palette(mat.$indigo-palette, A200, A400, 700);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.all-component-themes($my-theme);
+
+
+// $custom-app-primary: mat-palette(mat.$blue-palette);
+// $custom-app-secondary: mat-palette(mat-indigo, A200, A400, 700);
+// $custom-app-warn: mat-palette(mat-red);
+
+// $custom-theme: mat-light-theme($custom-app-primary, $custom-app-secondary, $custom-app-warn);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
