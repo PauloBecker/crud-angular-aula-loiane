@@ -21,9 +21,8 @@ import { CoursesListComponent } from './components/courses-list/courses-list.com
     CommonModule,
     CoursesRoutingModule,
     AppMaterialModule,
-    SharedModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class CoursesModule { }
