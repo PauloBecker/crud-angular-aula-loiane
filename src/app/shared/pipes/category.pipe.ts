@@ -14,10 +14,15 @@ export class CategoryPipe implements PipeTransform {
     if (value == 'front-end') {
       return 'code';
 
-    // } else if (value == 'Back-End') {
-    } else {
-
+    } else if(value == 'back-end'){
       return 'computer';
+
+    } else if(value == 'full-stack'){
+
+      return 'terminal';
+
+    }else{
+      return 'tab';
     }
     // return value;
   }
